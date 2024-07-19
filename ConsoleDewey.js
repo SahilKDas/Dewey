@@ -44,4 +44,42 @@ function verdict(input) {
     }
 }
 
-lunch(verdict("25% chance of success"))
+function DeweyGenerateName() {
+        const date = new Date();
+        const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const currentDayOfWeek = daysOfWeek[date.getDay()];
+        if (currentDayOfWeek === 'Friday' || currentDayOfWeek === 'Saturday') {
+                
+const consonants = ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Z'];
+                let single = consonants[Math.floor(Math.random()*vowels.length)] + vowels[Math.floor(Math.random()*vowels.length)]
+                return `${single} ${single}`
+        }
+        else {if (currentDayOfWeek == 'Monday') {
+                var names = [
+                        "No No",
+                        "AA OO",
+                        "Plums",
+                        "Seriously",
+                        "Hater Of Monday"
+                ];
+
+                return names[Math.floor(Math.random()*names.length)];
+        } else {
+                var names = [
+                        "Joe",
+                        "Ben",
+                        "Mary",
+                        "Gary",
+                        "Hazel"
+                ]
+                var adjectives = [
+                        "Fantastic",
+                        "Triumphant",
+                        "Happy",
+                        "Cheesy",
+                        "Simply Mad"
+                ]
+                return `${adjectives[Math.floor(Math.random()*adjectives.length)]} ${names[Math.floor(Math.random()*names.length)]}`
+        }}
+}
